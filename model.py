@@ -1,11 +1,10 @@
 import io
 
 from PIL import Image
-from keras.models import load_model
-from keras.preprocessing import image
+from keras.model import load_model
 import numpy as np
-# 한글 폰트 사용을 위해서 세팅
-from matplotlib import font_manager, rc
+
+
 class Predict:
     def predict(self, img):
         global class_name
