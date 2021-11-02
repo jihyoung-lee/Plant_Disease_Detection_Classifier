@@ -3,7 +3,10 @@ import json
 from flask import Flask, request, make_response
 from flask_restx import Api, Resource
 from model import Predict
+<<<<<<< HEAD
 
+=======
+>>>>>>> 002dd01cbfe1668f01612ececdbff4db564905aa
 
 app = Flask(__name__)
 api = Api(app,
