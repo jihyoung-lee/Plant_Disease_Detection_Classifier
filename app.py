@@ -1,9 +1,8 @@
 import json
 
 from flask import Flask, request, make_response
-from flask_restx import Api, Resource, reqparse
+from flask_restx import Api, Resource
 from model import Predict
-import werkzeug
 
 app = Flask(__name__)
 api = Api(app,
