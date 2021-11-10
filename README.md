@@ -10,4 +10,4 @@
 
 Classifier
 
-Python 3.8, Mobilenet
+Python 3.8, Mobilenet, Flask
