@@ -1,10 +1,10 @@
 import io
 from PIL import Image
-<<<<<<< Updated upstream
+
 from keras.model import load_model
-=======
+
 from keras.models import load_model
->>>>>>> Stashed changes
+
 import numpy as np
 
 
