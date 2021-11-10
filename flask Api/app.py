@@ -15,7 +15,7 @@ app.config['UPLOAD_FOLDER'] = 'uploaded\\image'
 
 
 @api.route('/predict')
-class Test(Resource):
+class PlantDiseaseDetection(Resource):
     def post(self):  # put application's code here
 
         input_img = request.files['image']
