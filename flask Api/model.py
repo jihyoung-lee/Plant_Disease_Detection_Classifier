@@ -8,11 +8,12 @@ import tensorflow as tf
 class Predict:
 
     def model_load(self):
-        model = load_model('mobilenetnew.h5')  # 모델 load
+        model = load_model('mobilenet.h5')  # 모델 load
 
         return model
 
     def prepare_img(self, img, target):
+        img = Image.open(io.BytesIO(img))
         if img.mode != "RGB":
             img = img.convert("RGB")
         img = img.resize(target)
