@@ -9,17 +9,28 @@ class Predict:
 
     def model_load(self):
         model = load_model('mobilenetnew.h5')  # 모델 load
+
         return model
+
+    def prepare_img(self, img, target):
+        if img.mode != "RGB":
+            img = img.convert("RGB")
+        img = img.resize(target)
+        img = img.to_array(img)
+        img = np.expand_dims(img, axis=0)
+        img = img / 255
+
+        return img
 
     def predict(self, img):
         global class_name
 
-        input_image = img
-        raw_image = Image.open(io.BytesIO(input_image)).convert('RGB')
-        img = np.asarray(raw_image)
-        img = Image.fromarray(img).resize((224, 224))
-        img = np.expand_dims(img, axis=0)
-        img = img / 255
+        # input_image = img
+        # raw_image = Image.open(io.BytesIO(input_image)).convert('RGB')
+        # img = np.asarray(raw_image)
+        # img = Image.fromarray(img).resize((224, 224))
+        # img = np.expand_dims(img, axis=0)
+        # img = img / 255
 
         model = self.model_load()
         probability_model = tf.keras.Sequential([model,
